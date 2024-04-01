@@ -39,6 +39,7 @@ def app():
             "nav-link": {"color": "white", "font-size": "15px", "text-align": "left", "margin": "0px",
                          "--hover-color": "blue"},
             "nav-link-selected": {"background-color": "#FE6771","font-size": "12px"},
+            "options":{"color":"black"},
         }
     )
 
