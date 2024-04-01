@@ -34,7 +34,7 @@ def app():
         default_index=0, 
         orientation='horizontal', # Set default index to 0 (Chatbot)
         styles={
-            "container": {"padding": "5!important", "background-color": 'grey'},
+            "container": {"padding": "5!important", "background-color": '#E8E8E8'},
             "icon": {"color": "white", "font-size": "18px"},
             "nav-link": {"color": "white", "font-size": "15px", "text-align": "left", "margin": "0px",
                          "--hover-color": "blue"},
