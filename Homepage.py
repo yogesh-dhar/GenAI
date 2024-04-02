@@ -33,7 +33,7 @@ def run():
             menu_icon='chat-text-fill',
             default_index=0,  # Set default index to 0 (Chatbot)
             styles={
-                "container": {"padding": "5!important", "background-color": 'lightgrey'},
+                "container": {"padding": "5!important", "background-color": 'grey'},
                 "icon": {"color": "white", "font-size": "20px"},
                 "nav-link": {"color": "white", "font-size": "17px", "text-align": "left", "margin": "0px",
                              "--hover-color": "#9B8082"},
