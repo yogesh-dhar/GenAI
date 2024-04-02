@@ -24,7 +24,7 @@ def generate_minutes(text_data, user_question, system_message_content, vector_st
 
 def app():
     # System message
-    st.subheader("Please upload a .txt or .docx file to chat with the document📂")
+    st.write("Please upload a .txt or .docx file to chat with the document📂")
 
     uploaded_file = st.file_uploader("Choose a file", type=["txt", "docx"])
 
