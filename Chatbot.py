@@ -45,11 +45,11 @@ def app():
     st.header("People Success GPT 🤖")
 
     # sidebar with user input
-    with st.sidebar:
-        user_input = st.text_input("Ask your question: ", key="user_input")
+    # with st.sidebar:
+    user_input = st.text_input("Ask your question: ", key="user_input")
 
         # handle user input
-        if user_input:
+    if user_input:
             st.session_state.messages.append(HumanMessage(content=user_input))
             with st.spinner("Thinking..."):
                 response = chat(st.session_state.messages)
