@@ -28,7 +28,7 @@ def app():
     st.write("Meeting Notes Summarizer")
 
     app = option_menu(
-        options=['QnA','Meeting Minutes', 'SentiAnalysis','Who Said What'],
+        options=['QnA','Meeting Minutes', 'Sentiment Analysis','Who Said What'],
         menu_title="Select the menu below :",
         icons=['wechat', 'filetype-pdf','megaphone'],
         default_index=0, 
@@ -36,7 +36,7 @@ def app():
         styles={
             "container": {"padding": "5!important", "background-color": 'black'},
             "icon": {"color": "white", "font-size": "18px"},
-            "nav-link": {"color": "white", "font-size": "15px", "text-align": "left", "margin": "0px",
+            "nav-link": {"color": "white", "font-size": "10px", "text-align": "left", "margin": "0px",
                          "--hover-color": "blue"},
             "nav-link-selected": {"background-color": "#FE6771","font-size": "12px"},
             "options":{"color":"black"},
@@ -45,7 +45,7 @@ def app():
 
     if app == 'Meeting Minutes':
         Meeting_Script_Summarizer.app()
-    if app == 'SentiAnalysis':
+    if app == 'Sentiment Analysis':
         SentiAnalysis.app()
     if app == 'QnA':
         QnAwithMeetScript.app()
