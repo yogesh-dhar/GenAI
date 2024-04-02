@@ -75,7 +75,7 @@ def app():
         st.write("**Output:**")
         st.write(result["result"])
     else:
-        st.warning("Please upload a document to proceed.")
+        None
 
 # Call the app function to execute it
 if __name__ == '__main__':
