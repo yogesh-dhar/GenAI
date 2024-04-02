@@ -25,7 +25,7 @@ def run_page(page_name):
 
 # Define page names and their corresponding display names
 def app():
-    st.write("Meeting Notes Summarizer")
+    st.subheader("Meeting Notes Summarizer")
 
     app = option_menu(None,['QnA','Meeting Minutes', 'Sentiment Analysis','Who Said What'],
         # menu_title="Select the menu below :",
