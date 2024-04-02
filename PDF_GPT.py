@@ -162,7 +162,7 @@ def app():
 
     # with st.sidebar:
     st.subheader("Chat with your document :books:")
-    pdf_docs = st.file_uploader("Upload your PDFs here'", type=["pdf"],accept_multiple_files=True)
+    pdf_docs = st.file_uploader("Upload your PDFs here and click process button", type=["pdf"],accept_multiple_files=True)
         
     if st.button("Process"):
             with st.spinner("Processing"):
