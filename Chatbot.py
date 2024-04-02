@@ -46,7 +46,7 @@ def app():
 
     # sidebar with user input
     # with st.sidebar:
-    user_input = st.text_input("Ask your question: ", key="user_input")
+    user_input = st.text_area("Ask your question: ", key="user_input")
 
         # handle user input
     if user_input:
