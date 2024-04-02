@@ -27,19 +27,18 @@ def run_page(page_name):
 def app():
     st.write("Meeting Notes Summarizer")
 
-    app = option_menu(
-        options=['QnA','Meeting Minutes', 'Sentiment Analysis','Who Said What'],
-        menu_title="Select the menu below :",
+    app = option_menu(None,['QnA','Meeting Minutes', 'Sentiment Analysis','Who Said What'],
+        # menu_title="Select the menu below :",
         icons=['wechat', 'filetype-pdf','megaphone'],
         default_index=0, 
         orientation='horizontal', # Set default index to 0 (Chatbot)
         styles={
-            "container": {"padding": "5!important", "background-color": 'black'},
+            "container": {"padding": "15!important", "background-color": 'black',"text-align": "center"},
             "icon": {"color": "white", "font-size": "18px"},
-            "nav-link": {"color": "white", "font-size": "10px", "text-align": "left", "margin": "0px",
+            "nav-link": {"color": "white", "font-size": "12px", "text-align": "center", "margin": "0px",
                          "--hover-color": "blue"},
             "nav-link-selected": {"background-color": "#FE6771","font-size": "12px"},
-            "options":{"color":"black"},
+            "option": {"color": "black", "text-align": "right"},
         }
     )
 
