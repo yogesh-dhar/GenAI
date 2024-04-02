@@ -22,16 +22,16 @@ def work_anniversary_message(text_data, system_message_content, vector_store):
     return qa({"query": prompt})
 
 def app():
-    st.header("Choose the Right Words to Celebrate Your Coworkers’ Work Milestones")
+    st.subheader("Choose the Right Words to Celebrate Your Coworkers’ Work Milestones")
 
     # Text input for Name
-    name = st.text_input("Name")
+    name = st.text_input("Enter the name")
 
     # Number input for Number of years worked
     years_worked = st.number_input("Number of years worked", min_value=0, step=1)
 
     # Text input for Achievements
-    achievements = st.text_area("Achievements")
+    achievements = st.text_area("Enter the achievements")
 
     # Selector for Relationship
     # relationship_options = ["Colleague", "Manager", "Subordinates"]
@@ -42,7 +42,7 @@ def app():
     tone = st.selectbox("Tone", tone_options)
 
     # Submit button
-    if st.button("Submit"):
+    if st.button("Generate Message"):
         if not name.strip() or not tone.strip() or not str(years_worked).strip() or not  achievements.strip():
             st.error("Please provide all the details.")
         else:
@@ -66,7 +66,7 @@ def app():
 
             # Access system message content
             # system_message_content = "You are a highly skilled AI trained in generating work anniversary message. Please read the given details like name, number of worked years, relationship, tone and draft a good work anniversary message"
-            system_message_content ="As an adept AI specialized in crafting work anniversary messages, I kindly request you to review the provided information including the individual's name, numbers of year worked,desired tone, notable achievements, and to compose a heartfelt work anniversary message. Feel free to incorporate uplifting emojis where appropriate.Please compose an email based on tone. For instance, if tone selected is Formal then draft formal email."
+            system_message_content ="As an adept AI specialized in crafting work anniversary messages, I kindly request you to review the provided information including the individual's name, numbers of year worked,desired tone, notable achievements, and to compose a heartfelt work anniversary message. Feel free to incorporate uplifting emojis .Please compose an email based on tone. For instance, if tone selected is Formal then draft formal email."
             
             # Generate work anniversary message
             result = work_anniversary_message(string_data, system_message_content, vector_store)
