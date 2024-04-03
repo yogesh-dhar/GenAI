@@ -49,11 +49,13 @@ def app():
     user_input = st.text_area("Ask your question: ", key="user_input")
 
         # handle user input
-    if user_input:
-            st.session_state.messages.append(HumanMessage(content=user_input))
-            with st.spinner("Thinking..."):
+    if st.button("Submit"):
+        # handle user input
+     if user_input:
+              st.session_state.messages.append(HumanMessage(content=user_input))
+              with st.spinner("Thinking..."):
                 response = chat(st.session_state.messages)
-            st.session_state.messages.append(
+              st.session_state.messages.append(
                 AIMessage(content=response.content))
 
     # display message history
