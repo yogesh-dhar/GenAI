@@ -20,7 +20,7 @@ from langchain.schema import (
 load_dotenv()
 
 def generate_minutes(text_data, system_message_content, vector_store):
-    prompt = f"{system_message_content}\nPlease generate sentiment analysis from given text: {text_data}"
+    prompt = f"{system_message_content}\nPlease generate meeting minutes from given text: {text_data}"
     qa = RetrievalQA.from_chain_type(
         llm=OpenAI(model_name="gpt-4-1106-preview"),
         # llm=OpenAI(model_name="text-davinci-003"),
@@ -70,7 +70,6 @@ def app():
         vector_store = FAISS.from_texts(texts, embeddings)
 
         # Access system message content (assuming first element is the system message)
-        #system_message_content = "You are an AI assistant which generates sentiment analysis on given text data."
         system_message_content = "You are an AI assistant tasked with generating Meeting Minutes (MOM) from the provided text, including details such as Participants,Summary,key points, action items, decisions made,conclusion  and other important details from the script and present them in a structured format suitable for distribution or reference and in different section in bullet points.Aim to retain the most important points, providing a coherent and readable summary that could help a person understand the main points of the discussion without needing to read the entire text.Please avoid unnecessary details or tangential points.Please ensure to follow the specified sequence: 1)Participants, 2) Brief Discussion/Agenda , 3) Summary of Discussion, 4)Action Items, 5) Decisions Made 6) Meeting Conclusion"
         result = generate_minutes(text_data, system_message_content, vector_store)  # Pass vector_store as argument
         st.write("**Output:**")
